@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type= "text/css" href= "index.css">
+    
+</head>
+
+<body class= "p-3 mb-2 bg-dark text-white ">
+    <div class= "container-fluid">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark" >
+          <a class="navbar-brand" href="#">
+          <img src="{%static '/images/logo_2.png' %}" width="150" height="60" class="d-inline-block align-top" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav w-100 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> 2 ENEMY POINTS || HERO POINTS 1</a>
+              </li>
+            </ul> 
+            <span class=" text-center font-weight-bold" >
+              1/5 Players
+            </span> 
+          </div>
+        </nav>
+        
+            <div class="row justify-content-center">
+            <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/light-bulb.png' %}" class="card-img-top" alt="cheese">     
+                  <div class="card-body text-center">
+                    <p class="card-text">SUPER BRIGHT VIEW</p>
+                    <button class="btn btn-light"> VOTE</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/lighter.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text">TURN LIGHTS OFF</p>
+                    <button class="btn btn-light"> VOTE</button>
+                    </div> 
+                </div>
+            </div>
+             <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/spiked-wall.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text">ACTIVATE SPIKES</p>
+                    <button class="btn btn-light"> VOTE</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/medusa-head.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">ADD MORE ENEMIES</p>
+                    <button class="btn btn-light"> VOTE</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/beer-bottle.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">PIXELLATE VIEW</p>
+                    <button class="btn btn-light"> VOTE</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/tortoise.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text"> MAKE PLAYER SLOW</p>
+                    <button class="btn btn-light"> VOTE</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/rock.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">REMOVE PLAYER'S GUN</p>
+                    <button class="btn btn-light"> VOTE</button>
+                </div>
+                </div>
+            </div>
+              <div class="col-lg-2 mb-2">
+                <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+                  <img src = "{% static '/images/circular-sawblade.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">ACTIVATE SAW BLADES</p>
+                    <button class="btn btn-light"> VOTE</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

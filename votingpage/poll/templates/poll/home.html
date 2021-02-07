@@ -1,0 +1,35 @@
+{% extends "poll/base.html" %}
+{% load static %}
+{% block title %}Homepage{% endblock %}
+
+{% block main %}
+
+ <div class="row justify-content-center">
+    <h1 class="text-center"> CHOOSE YOUR TEAM </h1>  
+        <div class="col-lg-3 mb-3">
+            <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+              <img src = "{% static '/images/angel-outfit.png' %}" class="card-img-top" alt="cheese">     
+              <div class="card-body text-center">
+              {% for poll in pollsGood %}
+                <p class="card-text">SAVIOR TEAM</p>
+                <a href="{% url 'voteGood' poll.id %}" class="btn btn-info btn-xs">CHOOSE</a> &nbsp;
+              {% endfor %}
+     
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-2 mb-2">
+            <div class="card p-3 mb-2 bg-danger text-white" style="width: 15rem;">
+              <img src = "{% static '/images/grim-reaper.png' %}" class="card-img-top" alt="cheese">     
+              <div class="card-body text-center">
+              {% for poll in pollsGood %}
+                <p class="card-text">ENEMY TEAM</p>
+               <a href="{% url 'voteBad' poll.id %}" class="btn btn-info btn-xs">CHOOSE</a> &nbsp;
+              {% endfor %}
+     
+            </div>
+            </div>
+        </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type= "text/css" href= "{% static '/otherapp/index.css' %}">
+    
+</head>
+
+<body class= "p-3 mb-2 bg-dark text-white ">
+    <div class= "container-fluid">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark" >
+          <a class="navbar-brand" href="{% url 'home' %}">
+          <img src="{%static '/images/logo_2.png' %}" width="150" height="60" class="d-inline-block align-top" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav w-100 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> 1 SAVIOR POINTS || ENEMY POINTS 2</a>
+              </li>
+            </ul> 
+            <span class=" text-center font-weight-bold" >
+              1/5 Players
+            </span> 
+          </div>
+        </nav>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row justify-content-center">
+            <div class="col-lg-2 mb-2">
+
+                <div class="p-3 mb-2 bg-light text-dark"style="width: 15rem;">
+                  <img src = "{% static '/images/angel-wings.png' %}" class="card-img-top" alt="cheese">     
+                  <div class="card-body text-center">
+                    <p class="card-text">LOW GRAVITY</p>
+                    <cock><strong>{{ poll.option_1 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option1">VOTE</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+                  <img src = "{% static '/images/bad-gnome.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text">MAKE ENEMIES SMALL</p>
+                    <cock><strong>{{ poll.option_2 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option2">VOTE</button>
+                    </div> 
+                </div>
+            </div>
+             <div class="col-lg-2 mb-2">
+                <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+                  <img src = "{% static '/images/ak47.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text">GIVE GUN</p>
+                    <cock><strong>{{ poll.option_3 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option3">VOTE</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+                  <img src = "{% static '/images/healing-shield.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">INVINCIBILITY</p>
+                    <cock><strong>{{ poll.option_4 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option4">VOTE</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+                  <img src = "{% static '/images/heart-battery.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">EXTRA LIFE</p>
+                    <cock><strong>{{ poll.option_5 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option5">VOTE</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+                  <img src = "{% static '/images/swordman.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text"> LESS DAMAGE</p>
+                    <cock><strong>{{ poll.option_6 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option6">VOTE</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-2 mb-2">
+                <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+                  <img src = "{% static '/images/reload-gun-barrel.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">INFINITE AMMO</p>
+                    <cock><strong>{{ poll.option_7 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option7">VOTE</button>
+                </div>
+                </div>
+            </div>
+              <div class="col-lg-2 mb-2">
+                <div class="p-3 mb-2 bg-light text-dark" style="width: 15rem;">
+                  <img src = "{% static '/images/mine-explosion.png' %}" class="card-img-top" alt="cheese">
+                  <div class="card-body text-center">
+                    <p class="card-text ">EXPLOSIVE BULLETS</p>
+                    <cock><strong>{{ poll.option_8 }}</strong></cock>
+                    <button type="submit" name="poll" class="btn btn-danger" value="option8">VOTE</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
